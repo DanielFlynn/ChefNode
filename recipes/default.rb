@@ -18,7 +18,8 @@ include_recipe 'apt'
 include_recipe 'nodejs'
 
 nodejs_npm 'pm2'
-package "nginx"
+
+package 'nginx'
 service 'nginx' do
   action [:enable, :start]
 end
