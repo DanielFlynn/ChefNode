@@ -8,14 +8,12 @@
 
 
 # Install nginx, python, ruby this is where the code will be.
-
-
 apt_update 'update_sources' do
   action :update
 end
 
-include_recipe 'apt'
 include_recipe 'nodejs'
+include_recipe 'apt'
 
 nodejs_npm 'pm2'
 
