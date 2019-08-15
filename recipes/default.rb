@@ -19,10 +19,12 @@ nodejs_npm 'pm2'
 
 package 'nginx'
 service 'nginx' do
-  action [:enable, :start]
+  action :enable
 end
 
-
+service 'nginx' do
+  action :start
+end
 
 template '/etc/nginx/sites-available/proxy.conf' do
   source 'proxy.conf.erb'
