@@ -88,7 +88,7 @@ server {
 
 
     location / {
-        proxy_pass http://localhost:<%= @proxyport_port %>; #not assignment get what is inside @ sign like self
+        proxy_pass http://localhost:<%= @proxy_port %>; #not assignment get what is inside @ sign like self
         # First attempt to serve request as file, then
         # as directory, then fall back to displaying a 404.
         try_files $uri $uri/ =404;
